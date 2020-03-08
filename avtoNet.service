@@ -1,0 +1,14 @@
+[Unit]
+Description=Service za preverjanje avto.net spletne strani
+After=network.target
+
+[Service]
+ExecStart=/home/lubuntu/jan-projects/janenv/bin/python -u avtoNet_service.py
+WorkingDirectory=/home/lubuntu/jan-projects/avtoNet-api/
+StandardOutput=inherit
+StandardError=inherit
+Restart=no
+User=lubuntu
+
+[Install]
+WantedBy=multi-user.target

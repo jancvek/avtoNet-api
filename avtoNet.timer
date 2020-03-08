@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer for checking avto net
+
+[Timer]
+OnCalendar=*-*-* 15:00:00
+OnCalendar=*-*-* 21:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
