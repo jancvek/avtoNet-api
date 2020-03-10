@@ -131,7 +131,7 @@ def searchNewCars():
                         today = datetime.now()
                         dt_string = today.strftime("%Y-%m-%d %H:%M:%S")
 
-                        jan_sqlite.run_query(sqlConn, ''' UPDATE cars SET price_change_on = '''+dt_string+''' WHERE avto_net_id='''+ id)
+                        jan_sqlite.run_query(sqlConn, "UPDATE cars SET price_change_on = '"+dt_string+"' WHERE avto_net_id='"+ id+"'")
 
                         pramas2 = 'avto_net_id,price' 
                         values2 = (str(id),int(price.replace('.','')))
@@ -148,4 +148,5 @@ def searchNewCars():
                     jan_sqlite.insert_data(sqlConn, 'prices', pramas2, values2)
 
 if __name__ == '__main__':
-    notifyByEmail('2020-03-08 17:20:00')
+    # searchNewCars()
+    # notifyByEmail('2020-03-10 01:20:00')
