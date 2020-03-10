@@ -131,7 +131,7 @@ def searchNewCars():
                         today = datetime.now()
                         dt_string = today.strftime("%Y-%m-%d %H:%M:%S")
 
-                        jan_sqlite.run_query(sqlConn, ''' UPDATE cars SET price_change_on = '''+dt_string+''' WHERE id='''+ id)
+                        jan_sqlite.run_query(sqlConn, ''' UPDATE cars SET price_change_on = '''+dt_string+''' WHERE avto_net_id='''+ id)
 
                         pramas2 = 'avto_net_id,price' 
                         values2 = (str(id),int(price.replace('.','')))
