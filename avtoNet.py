@@ -148,5 +148,5 @@ def searchNewCars():
                     jan_sqlite.insert_data(sqlConn, 'prices', pramas2, values2)
 
 if __name__ == '__main__':
-    # searchNewCars()
-    # notifyByEmail('2020-03-10 01:20:00')
+    searchNewCars()
+    notifyByEmail('2020-03-10 01:20:00')    
